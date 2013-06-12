@@ -1,23 +1,24 @@
 <div class="container">
     <div class="row"> 
-        <div class="span4">
+        <div class="span12">
         <% if @tweets.empty? %>
             <em>No tweets found</em>
         <% else %>
             <table class="tweets">
-                <tr>
+                <tr style="text-align: left;">
                     <th>Status</th>
                     <th>Zombie</th>
-                    <th></th>
-                    <th></th>
+                    <th>Actions</th>
                 </tr>
             <% @tweets.each do |tweet| %>
                 <tr>
                 <td><%= tweet.status %></td>
                 <td><%= link_to tweet.zombie.name, zombies_path(tweet.zombie) %></td>
-                <td><%= link_to 'edit', edit_tweet_path(tweet) %></td>
-                <td><%= link_to 'delete', tweet, :method => :delete %></td>
-        	    </tr>
+                <td>
+                  <%= link_to 'edit', edit_tweet_path(tweet) %> - 
+                  <%= link_to 'delete', tweet, :method => :delete %>
+                </td>
+              </tr>
             <% end %>
             </table>
         <% end %>
@@ -25,3 +26,30 @@
     </div>
 </div>
 
+<br>
+<br>
+<br>
+<div class="container">
+  <div class="row">
+    <%= @question.description + ':'%>
+
+    <br>
+    <br>
+    <div class="span12">
+      <% @result.each do |a| %>
+        <%= a %> <br>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<br>
+<br>
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <%= link_to 'Proximo ejercicio',  tweets_path(question_id: @question.id + 1) %> <br>
+      <%= link_to 'Ejercicio anterior', tweets_path(question_id: @question.id - 1) %> <br>
+    </div>
+  </div>
+</div>

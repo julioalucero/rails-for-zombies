@@ -8,14 +8,18 @@ class TweetsController < ApplicationController
 
   def index
     @tweets = Tweet.all
+    @result = Tweet.result @tweets
+    @question = Question.find(params[:question_id])
   end
 
   def new
     @tweet = Tweet.new
-    @tweet.zombie = Zombie.first
   end
 
   def create
+    @tweet = Tweet.new(params[:tweet])
+    @tweet.zombie = Zombie.first
+
     if @tweet = Tweet.create(params[:tweet])
       render :show
     else

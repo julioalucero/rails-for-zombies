@@ -4,3 +4,17 @@ By http://railsforzombies.org/levels/1
 
 TODO: Add test for controller tweets
 
+
+
+Ruby Array
+  new, << 
+  each, each_with_index
+  collect, map
+  count, first, last, min, max
+  empty?, any?
+  include?, uniq
+  sort, reverse, sort_by
+
+Hash
+  new, hash[key], hash[value]
+  each, has_key?, has_value?

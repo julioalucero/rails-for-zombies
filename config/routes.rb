@@ -1,8 +1,11 @@
 TwitterForZombies::Application.routes.draw do
 
-  resources "tweets"
+  get 'exercise/:id' => 'tweets#exercise'
+
+  resources :tweets 
+
   resources "zombies"
-  
+
   root :to => "tweets#index"
 
   # The priority is based upon order of creation:
