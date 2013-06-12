@@ -39,3 +39,5 @@ gem 'less-rails-bootstrap'
 
 # To use debugger
 # gem 'debugger'
+gem 'pry'
+gem 'awesome_print'
