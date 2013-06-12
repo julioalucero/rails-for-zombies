@@ -25,6 +25,18 @@ Tweet.find_or_create_by_status(zombie: Zombie.order("RANDOM()").first,  status: 
 Tweet.find_or_create_by_status(zombie: Zombie.order("RANDOM()").first,  status: 'Todos cortiso los tweets')
 Tweet.find_or_create_by_status(zombie: Zombie.order("RANDOM()").first,  status: 'Algunos tienen errores')
 
+# Array Exercises
+Question.find_or_create_by_description(description: 'usar count, first, last, min, max')
+Question.find_or_create_by_description(description: 'emtpy?, any?')
 Question.find_or_create_by_description(description: 'Cree un Array con todos los nombres, ej: julio, eloy, manuel, pablo')
 Question.find_or_create_by_description(description: 'Ordene de mayor a menor por nombre')
-Question.find_or_create_by_description(description: 'Ordene de mayor a menor')
+Question.find_or_create_by_description(description: 'algo con map')
+Question.find_or_create_by_description(description: 'include?, uniq')
+Question.find_or_create_by_description(description: 'sort, reverse, sort_by')
+
+# Hash Exercises
+Question.find_or_create_by_description(description: 'new hash')
+Question.find_or_create_by_description(description: 'hash[key], hasy[value]')
+Question.find_or_create_by_description(description: 'each')
+Question.find_or_create_by_description(description: 'has_key?, has_value?')
+
